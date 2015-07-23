@@ -22,18 +22,27 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-AO-QpU">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
                                         <state key="normal" image="rain-button"/>
+                                        <connections>
+                                            <action selector="soundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFo-7W-ByB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSa-sk-8bQ">
                                         <rect key="frame" x="82" y="0.0" width="62" height="62"/>
                                         <state key="normal" image="night-button"/>
+                                        <connections>
+                                            <action selector="soundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyT-Rg-znz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-Fl-akj">
                                         <rect key="frame" x="164" y="0.0" width="62" height="62"/>
                                         <state key="normal" image="bistro-button"/>
+                                        <connections>
+                                            <action selector="soundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3KS-hQ-FTQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="DHD-5k-kBf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DHD-5k-kBf">
                                 <rect key="frame" x="200" y="150" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="RV1-BJ-r9q"/>
@@ -49,15 +58,21 @@
                             <constraint firstItem="DHD-5k-kBf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="zzK-cD-fI7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bistroButton" destination="SaS-Fl-akj" id="FYt-dp-Rqc"/>
+                        <outlet property="currentSoundImage" destination="DHD-5k-kBf" id="Oau-5d-co7"/>
+                        <outlet property="nightButton" destination="rSa-sk-8bQ" id="jV9-n7-ufz"/>
+                        <outlet property="rainButton" destination="CP0-AO-QpU" id="bai-3d-PzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="381" y="411"/>
         </scene>
     </scenes>
     <resources>
         <image name="bistro-button" width="62" height="62"/>
         <image name="night-button" width="62" height="62"/>
-        <image name="rain" width="200" height="200"/>
         <image name="rain-button" width="62" height="62"/>
     </resources>
 </document>

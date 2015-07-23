@@ -14,6 +14,9 @@
 		89A92D1D1B609AA500A2EEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A92D1B1B609AA500A2EEFA /* LaunchScreen.storyboard */; };
 		89A92D281B609AA500A2EEFA /* WhiteNoiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92D271B609AA500A2EEFA /* WhiteNoiseTests.swift */; };
 		89A92D331B609AA500A2EEFA /* WhiteNoiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92D321B609AA500A2EEFA /* WhiteNoiseUITests.swift */; };
+		89A92D411B60E39B00A2EEFA /* bistro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89A92D401B60E39B00A2EEFA /* bistro.m4a */; };
+		89A92D441B60E48300A2EEFA /* night.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89A92D421B60E43000A2EEFA /* night.m4a */; };
+		89A92D451B60E48300A2EEFA /* rain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89A92D431B60E43000A2EEFA /* rain.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		89A92D2E1B609AA500A2EEFA /* WhiteNoiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteNoiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A92D321B609AA500A2EEFA /* WhiteNoiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNoiseUITests.swift; sourceTree = "<group>"; };
 		89A92D341B609AA500A2EEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A92D401B60E39B00A2EEFA /* bistro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bistro.m4a; sourceTree = "<group>"; };
+		89A92D421B60E43000A2EEFA /* night.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = night.m4a; sourceTree = "<group>"; };
+		89A92D431B60E43000A2EEFA /* rain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = rain.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				89A92D141B609AA500A2EEFA /* ViewController.swift */,
 				89A92D161B609AA500A2EEFA /* Main.storyboard */,
 				89A92D191B609AA500A2EEFA /* Assets.xcassets */,
+				89A92D401B60E39B00A2EEFA /* bistro.m4a */,
+				89A92D421B60E43000A2EEFA /* night.m4a */,
+				89A92D431B60E43000A2EEFA /* rain.m4a */,
 				89A92D1B1B609AA500A2EEFA /* LaunchScreen.storyboard */,
 				89A92D1E1B609AA500A2EEFA /* Info.plist */,
 			);
@@ -229,7 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A92D1D1B609AA500A2EEFA /* LaunchScreen.storyboard in Resources */,
+				89A92D441B60E48300A2EEFA /* night.m4a in Resources */,
+				89A92D411B60E39B00A2EEFA /* bistro.m4a in Resources */,
 				89A92D1A1B609AA500A2EEFA /* Assets.xcassets in Resources */,
+				89A92D451B60E48300A2EEFA /* rain.m4a in Resources */,
 				89A92D181B609AA500A2EEFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
