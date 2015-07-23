@@ -15,11 +15,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var bistroButton: UIButton!
     @IBOutlet weak var nightButton: UIButton!
     @IBOutlet weak var rainButton: UIButton!
+    @IBOutlet weak var toggleSoundButton: UIButton!
+
+    let soundStoppedImage = UIImage(named: "sound-stopped")!
+    let soundPlayingImage = UIImage(named: "sound-playing")!
+
+    var playing: Bool! {
+        didSet {
+            if playing! { // wtf? why do i need to force unwrap?
+                soundPlayer.play()
+                toggleSoundButton.setImage(soundPlayingImage, forState: UIControlState.Normal)
+            } else {
+                soundPlayer.stop()
+                toggleSoundButton.setImage(soundStoppedImage, forState: UIControlState.Normal)
+            }
+        }
+    }
 
     var soundPlayer: AVAudioPlayer!
 
     var currentSoundName: SoundName! {
         didSet {
+            defer { playing = true }
+
             if(oldValue == currentSoundName) {
                 return
             }
@@ -48,8 +66,6 @@ class ViewController: UIViewController {
             }
 
             soundPlayer.numberOfLoops = -1
-            soundPlayer.play()
-
         }
     }
 
@@ -62,8 +78,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentSoundName = .Rain
-//        currentSoundName = .Rain
-        // Do any additional setup after loading the view, typically from a nib.
+        playing = true
+
+        // #0065A0
+        self.view.backgroundColor = UIColor(red: 0, green: 0x65/255.0, blue: 0xA0/255.0, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +103,9 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func togglePlaying(sender: AnyObject) {
+        self.playing = !playing
+    }
 
 }
 

@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GKI-lb-a05">
-                                <rect key="frame" x="187" y="511" width="226" height="62"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GKI-lb-a05">
+                                <rect key="frame" x="155.5" y="511" width="289" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-AO-QpU">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
@@ -27,17 +27,24 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSa-sk-8bQ">
-                                        <rect key="frame" x="82" y="0.0" width="62" height="62"/>
+                                        <rect key="frame" x="77" y="0.0" width="62" height="62"/>
                                         <state key="normal" image="night-button"/>
                                         <connections>
                                             <action selector="soundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyT-Rg-znz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-Fl-akj">
-                                        <rect key="frame" x="164" y="0.0" width="62" height="62"/>
+                                        <rect key="frame" x="154" y="0.0" width="62" height="62"/>
                                         <state key="normal" image="bistro-button"/>
                                         <connections>
                                             <action selector="soundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3KS-hQ-FTQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-72-uoH">
+                                        <rect key="frame" x="231" y="0.0" width="58" height="62"/>
+                                        <state key="normal" image="sound-playing"/>
+                                        <connections>
+                                            <action selector="togglePlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mm2-iO-hFZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -50,7 +57,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.30196078431372547" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GKI-lb-a05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5zD-js-k6H"/>
                             <constraint firstItem="DHD-5k-kBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7an-iw-djZ"/>
@@ -63,6 +70,7 @@
                         <outlet property="currentSoundImage" destination="DHD-5k-kBf" id="Oau-5d-co7"/>
                         <outlet property="nightButton" destination="rSa-sk-8bQ" id="jV9-n7-ufz"/>
                         <outlet property="rainButton" destination="CP0-AO-QpU" id="bai-3d-PzL"/>
+                        <outlet property="toggleSoundButton" destination="Vv4-72-uoH" id="TrH-3d-zrK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,5 +82,7 @@
         <image name="bistro-button" width="62" height="62"/>
         <image name="night-button" width="62" height="62"/>
         <image name="rain-button" width="62" height="62"/>
+        <image name="sound-playing" width="58" height="58"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
