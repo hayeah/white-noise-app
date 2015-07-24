@@ -67,7 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="bistroButton" destination="SaS-Fl-akj" id="FYt-dp-Rqc"/>
-                        <outlet property="currentSoundImage" destination="DHD-5k-kBf" id="Oau-5d-co7"/>
+                        <outlet property="currentSoundImageView" destination="DHD-5k-kBf" id="Y7d-dB-pTD"/>
                         <outlet property="nightButton" destination="rSa-sk-8bQ" id="jV9-n7-ufz"/>
                         <outlet property="rainButton" destination="CP0-AO-QpU" id="bai-3d-PzL"/>
                         <outlet property="toggleSoundButton" destination="Vv4-72-uoH" id="TrH-3d-zrK"/>

@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var currentSoundImage: UIImageView!
+    @IBOutlet weak var currentSoundImageView: UIImageView!
     @IBOutlet weak var bistroButton: UIButton!
     @IBOutlet weak var nightButton: UIButton!
     @IBOutlet weak var rainButton: UIButton!
@@ -22,17 +22,23 @@ class ViewController: UIViewController {
 
     var playing: Bool! {
         didSet {
-            if playing! { // wtf? why do i need to force unwrap?
-                soundPlayer.play()
+            if playing == true {
+                soundPlayer?.play()
                 toggleSoundButton.setImage(soundPlayingImage, forState: UIControlState.Normal)
             } else {
-                soundPlayer.stop()
+                soundPlayer?.stop()
                 toggleSoundButton.setImage(soundStoppedImage, forState: UIControlState.Normal)
             }
         }
     }
 
-    var soundPlayer: AVAudioPlayer!
+    var currentSoundIcon: UIImage? {
+        get {
+            return UIImage(named: currentSoundName.rawValue)
+        }
+    }
+
+    var soundPlayer: AVAudioPlayer?
 
     var currentSoundName: SoundName! {
         didSet {
@@ -45,14 +51,13 @@ class ViewController: UIViewController {
             let name = currentSoundName.rawValue
 
             print("sound: \(currentSoundName.rawValue)")
-            currentSoundImage.image = UIImage(named: name)
 
-            currentSoundURL = NSBundle.mainBundle().URLForResource(name, withExtension: "m4a")
-        }
-    }
+            //
+            animateSoundSwitching(oldValue, newSoundName: currentSoundName)
 
-    var currentSoundURL: NSURL? {
-        didSet {
+
+            let currentSoundURL = NSBundle.mainBundle().URLForResource(name, withExtension: "m4a")
+
             guard currentSoundURL != nil else {
                 print("no sound file found: \(currentSoundName.rawValue)")
                 soundPlayer = nil
@@ -65,8 +70,12 @@ class ViewController: UIViewController {
                 return
             }
 
-            soundPlayer.numberOfLoops = -1
+            soundPlayer?.numberOfLoops = -1
         }
+    }
+
+    func animateSoundSwitching(oldSoundName: SoundName?, newSoundName: SoundName) {
+        currentSoundImageView.image = UIImage(named: newSoundName.rawValue)
     }
 
     enum SoundName: String {
