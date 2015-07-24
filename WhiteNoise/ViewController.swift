@@ -161,6 +161,10 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 0, green: 0x65/255.0, blue: 0xA0/255.0, alpha: 1)
     }
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
